@@ -272,3 +272,59 @@ vi ~/share/cstrike/addons/amxmodx/configs/sql.cfg
 # restart
 sudo docker restart hlds16
 ```
+
+
+
+
+
+
+
+
+
+# amxx plugins
+
+## Парашют
+https://cs-mod.ru/load/plaginy_dlja_cs_1_6/servernye/plagin_parashjut_dlja_ks_1_6/98-1-0-220
+```bash
+cp ~/cstrike/addons/amxmodx/plugins/amx_parachute.amxx ~/share/cstrike/addons/amxmodx/plugins/
+cp ~/cstrike/addons/amxmodx/scripting/amx_parachute.sma ~/share/cstrike/addons/amxmodx/scripting/
+```
+
+## Урон
+https://cs-mod.ru/load/plaginy_dlja_cs_1_6/statistika/plagin_damager_dlja_cs_1_6/95-1-0-165
+```bash
+cp ~/cstrike/addons/amxmodx/plugins/damager.amxx ~/share/cstrike/addons/amxmodx/plugins/
+cp ~/cstrike/addons/amxmodx/scripting/damager.sma ~/share/cstrike/addons/amxmodx/scripting/
+```
+
+## rtv
+http://www.4cw.ru/cs/pluginscs/71-plagin-rtv-dlya-cs-16-rockthevote.html
+```bash
+cp ~/cstrike/addons/amxmodx/plugins/rockthevote_custom.amxx ~/share/cstrike/addons/amxmodx/plugins/
+cp ~/cstrike/addons/amxmodx/scripting/rockthevote_custom.sma ~/share/cstrike/addons/amxmodx/scripting/
+vi ~/share/cstrike/addons/amxmodx/configs/amxx.cfg
+#--
+amx_timevote 1
+amx_howmanypercentage 2
+#--
+```
+
+## kill - синий фон
+https://cs-mod.ru/load/plaginy_dlja_cs_1_6/ehffekty/plagin_blue_fade_sinevatyj_ehkran_pri_ubijstve_cs_1_6/97-1-0-440
+```bash
+cp ~/cstrike/addons/amxmodx/plugins/Blue_Fade.amxx ~/share/cstrike/addons/amxmodx/plugins/
+cp ~/cstrike/addons/amxmodx/scripting/Blue_Fade.sma ~/share/cstrike/addons/amxmodx/scripting/
+```
+
+## Рестарт
+```bash
+vi ~/share/cstrike/addons/amxmodx/configs/plugins.ini
+#--
+amx_parachute.amxx
+damager.amxx
+Blue_Fade.amxx
+rockthevote_custom.amxx
+#--
+
+sudo docker restart hlds16
+```
