@@ -305,7 +305,9 @@ cp ~/cstrike/addons/amxmodx/scripting/rockthevote_custom.sma ~/share/cstrike/add
 vi ~/share/cstrike/addons/amxmodx/configs/amxx.cfg
 #--
 amx_timevote 1
-amx_howmanypercentage 2
+amx_howmanypercentage 0.3
+amx_howmanyvotes number 2
+amx_directmapchange 1
 #--
 ```
 
