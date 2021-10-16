@@ -322,6 +322,8 @@ cp ~/cstrike/addons/amxmodx/scripting/Blue_Fade.sma ~/share/cstrike/addons/amxmo
 ```bash
 vi ~/share/cstrike/addons/amxmodx/configs/plugins.ini
 #--
+;nextmap.amxx         ; OFF
+;mapchooser.amxx      ; OFF
 amx_parachute.amxx
 damager.amxx
 Blue_Fade.amxx
