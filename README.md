@@ -297,6 +297,20 @@ cp ~/cstrike/addons/amxmodx/plugins/damager.amxx ~/share/cstrike/addons/amxmodx/
 cp ~/cstrike/addons/amxmodx/scripting/damager.sma ~/share/cstrike/addons/amxmodx/scripting/
 ```
 
+## kill - синий фон
+https://cs-mod.ru/load/plaginy_dlja_cs_1_6/ehffekty/plagin_blue_fade_sinevatyj_ehkran_pri_ubijstve_cs_1_6/97-1-0-440
+```bash
+cp ~/cstrike/addons/amxmodx/plugins/Blue_Fade.amxx ~/share/cstrike/addons/amxmodx/plugins/
+cp ~/cstrike/addons/amxmodx/scripting/Blue_Fade.sma ~/share/cstrike/addons/amxmodx/scripting/
+```
+
+## Anti DoubleDuck
+https://cs-mod.ru/load/plaginy_dlja_cs_1_6/servernye/plagin_anti_doubleduck_anti_dvojnoe_prisedanie_cs_1_6/98-1-0-305
+```bash
+cp ~/cstrike/addons/amxmodx/plugins/antidoubleduck.amxx ~/share/cstrike/addons/amxmodx/plugins/
+cp ~/cstrike/addons/amxmodx/scripting/antidoubleduck.sma ~/share/cstrike/addons/amxmodx/scripting/
+```
+
 ## rtv
 http://www.4cw.ru/cs/pluginscs/71-plagin-rtv-dlya-cs-16-rockthevote.html
 ```bash
@@ -311,12 +325,15 @@ amx_directmapchange 1
 #--
 ```
 
-## kill - синий фон
-https://cs-mod.ru/load/plaginy_dlja_cs_1_6/ehffekty/plagin_blue_fade_sinevatyj_ehkran_pri_ubijstve_cs_1_6/97-1-0-440
+## Mapchooser (+rtv)
+https://cs-site.ru/cs/plugins/159-plagin-mapchooser-new-golosovanie-za-kartu-dlya-cs-16.html
 ```bash
-cp ~/cstrike/addons/amxmodx/plugins/Blue_Fade.amxx ~/share/cstrike/addons/amxmodx/plugins/
-cp ~/cstrike/addons/amxmodx/scripting/Blue_Fade.sma ~/share/cstrike/addons/amxmodx/scripting/
+cp ~/cstrike/addons/amxmodx/plugins/csds_map.amxx ~/share/cstrike/addons/amxmodx/plugins/
+cp ~/cstrike/addons/amxmodx/scripting/csds_map.sma ~/share/cstrike/addons/amxmodx/scripting/
+cp ~/cstrike/addons/amxmodx/data/lang/csds_map.txt ~/share/cstrike/addons/amxmodx/data/lang/
 ```
+
+
 
 ## Рестарт
 ```bash
@@ -324,10 +341,13 @@ vi ~/share/cstrike/addons/amxmodx/configs/plugins.ini
 #--
 ;nextmap.amxx         ; OFF
 ;mapchooser.amxx      ; OFF
+;timeleft.amxx        ; OFF
 amx_parachute.amxx
 damager.amxx
 Blue_Fade.amxx
-rockthevote_custom.amxx
+antidoubleduck.amxx
+;rockthevote_custom.amxx
+csds_map.amxx
 #--
 
 sudo docker restart hlds16
