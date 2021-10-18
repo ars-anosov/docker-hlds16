@@ -6,12 +6,12 @@
 #define MAP_ON_VOTE	5	// Карт в меню голосования
 
 #define ROCK_THE_VOTE		// Функция rtv 
-#define RTV_DELAY	180	// Задержка о начала карты для использования rtv функции (в секундах)
-#define RTV_PERCENTS	60	// Процент голосов
+#define RTV_DELAY	60	// Задержка о начала карты для использования rtv функции (в секундах)
+#define RTV_PERCENTS	30	// Процент голосов
 
-// #define NOMINATE		// Функция номинаций
+#define NOMINATE		// Функция номинаций
 #define NOM_MAX		3	// Максимум карт для номинации
-#define NOM_PLAYER	1	// Максимум карт для номинации одним игроком
+#define NOM_PLAYER	2	// Максимум карт для номинации одним игроком
 #define SAY_MAPS		// Команда /maps
 #define NOM_WITH_PREFIXES	// Номинация карты без префиксов(de_dust2 можно номинировать как dust2)
 
