@@ -311,26 +311,16 @@ cp ~/cstrike/addons/amxmodx/plugins/antidoubleduck.amxx ~/share/cstrike/addons/a
 cp ~/cstrike/addons/amxmodx/scripting/antidoubleduck.sma ~/share/cstrike/addons/amxmodx/scripting/
 ```
 
-## rtv
-http://www.4cw.ru/cs/pluginscs/71-plagin-rtv-dlya-cs-16-rockthevote.html
+## Advanced MapChooser (+rtv)
+http://proplaying.ru/load/counter_strike_1_6/cs1_6_plaginy/advanced_mapchooser_menedzher_kart/30-1-0-965
 ```bash
-cp ~/cstrike/addons/amxmodx/plugins/rockthevote_custom.amxx ~/share/cstrike/addons/amxmodx/plugins/
-cp ~/cstrike/addons/amxmodx/scripting/rockthevote_custom.sma ~/share/cstrike/addons/amxmodx/scripting/
-vi ~/share/cstrike/addons/amxmodx/configs/amxx.cfg
-#--
-amx_timevote 1
-amx_howmanypercentage 0.3
-amx_howmanyvotes number 2
-amx_directmapchange 1
-#--
-```
+cp ~/cstrike/addons/amxmodx/scripting/map_chooser.sma ~/share/cstrike/addons/amxmodx/scripting/
 
-## Mapchooser (+rtv)
-https://cs-site.ru/cs/plugins/159-plagin-mapchooser-new-golosovanie-za-kartu-dlya-cs-16.html
-```bash
-cp ~/cstrike/addons/amxmodx/plugins/csds_map.amxx ~/share/cstrike/addons/amxmodx/plugins/
-cp ~/cstrike/addons/amxmodx/scripting/csds_map.sma ~/share/cstrike/addons/amxmodx/scripting/
-cp ~/cstrike/addons/amxmodx/data/lang/csds_map.txt ~/share/cstrike/addons/amxmodx/data/lang/
+sudo docker exec -w /opt/hlds/cstrike/addons/amxmodx/scripting/ hlds16 mkdir compiled
+sudo docker exec -w /opt/hlds/cstrike/addons/amxmodx/scripting hlds16 ./amxxpc map_chooser.sma -ocompiled/map_chooser.amxx
+cp ~/share/cstrike/addons/amxmodx/scripting/compiled/map_chooser.amxx ~/share/cstrike/addons/amxmodx/plugins/
+
+cp ~/cstrike/addons/amxmodx/configs/maps.ini ~/share/cstrike/addons/amxmodx/configs/
 ```
 
 
@@ -346,8 +336,7 @@ amx_parachute.amxx
 damager.amxx
 Blue_Fade.amxx
 antidoubleduck.amxx
-;rockthevote_custom.amxx
-csds_map.amxx
+map_chooser.amxx
 #--
 
 sudo docker restart hlds16
