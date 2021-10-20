@@ -1,4 +1,4 @@
-#include <http://cscontrol.ru>
+#include <amxmodx>
 #include <hamsandwich>
 
 #define PLUGIN    "Blue Fade"

@@ -274,6 +274,9 @@ vi ~/share/cstrike/addons/amxmodx/configs/users.ini
 vi ~/share/cstrike/addons/amxmodx/configs/amxx.cfg
 # sql
 vi ~/share/cstrike/addons/amxmodx/configs/sql.cfg
+
+# Сюда буду компилировать .sma
+mkdir -p ~/share/cstrike/addons/amxmodx/scripting/compiled
 ```
 
 ## Парашют
@@ -293,8 +296,10 @@ cp ~/cstrike/addons/amxmodx/scripting/damager.sma ~/share/cstrike/addons/amxmodx
 ## kill - синий фон
 https://cs-mod.ru/load/plaginy_dlja_cs_1_6/ehffekty/plagin_blue_fade_sinevatyj_ehkran_pri_ubijstve_cs_1_6/97-1-0-440
 ```bash
-cp ~/cstrike/addons/amxmodx/plugins/Blue_Fade.amxx ~/share/cstrike/addons/amxmodx/plugins/
 cp ~/cstrike/addons/amxmodx/scripting/Blue_Fade.sma ~/share/cstrike/addons/amxmodx/scripting/
+
+sudo docker exec -w /opt/hlds/cstrike/addons/amxmodx/scripting hlds16 ./amxxpc Blue_Fade.sma -ocompiled/Blue_Fade.amxx
+cp ~/share/cstrike/addons/amxmodx/scripting/compiled/Blue_Fade.amxx ~/share/cstrike/addons/amxmodx/plugins/
 ```
 
 ## Anti DoubleDuck
@@ -309,7 +314,6 @@ http://proplaying.ru/load/counter_strike_1_6/cs1_6_plaginy/advanced_mapchooser_m
 ```bash
 cp ~/cstrike/addons/amxmodx/scripting/map_chooser.sma ~/share/cstrike/addons/amxmodx/scripting/
 
-sudo docker exec -w /opt/hlds/cstrike/addons/amxmodx/scripting/ hlds16 mkdir compiled
 sudo docker exec -w /opt/hlds/cstrike/addons/amxmodx/scripting hlds16 ./amxxpc map_chooser.sma -ocompiled/map_chooser.amxx
 cp ~/share/cstrike/addons/amxmodx/scripting/compiled/map_chooser.amxx ~/share/cstrike/addons/amxmodx/plugins/
 
