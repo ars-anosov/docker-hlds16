@@ -25,5 +25,11 @@
 <body>
 Чистый HLDS от Steam + AMXX<br>
 Стата PsychoStats на <a href="http://65.108.82.45/ps/">http://65.108.82.45/ps/</a>
+<br/><br/>
+На сервере можно:
+<ul>
+    <li>Купить парашют : <b>say buy_parachute</b></li>
+    <li>Голосовать за смену карты : <b>say rtv</b></li>
+    <li>Номирировать карту : <b>say de_dust2</b></li>
 </body>
 </html>

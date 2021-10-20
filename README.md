@@ -257,10 +257,16 @@ mkdir ~/share/nginx/www/cstrike
 sudo docker cp hlds16:/opt/hlds/cstrike/maps ~/share/nginx/www/cstrike/maps
 ```
 
-# 3.3 Тюнинг AMXX
 
-Тут надо накидать всяких плагинов и настроить их конфиги...
 
+
+
+
+
+
+
+# 4 amxx plugins
+Просто глянем:
 ```bash
 # админы
 vi ~/share/cstrike/addons/amxmodx/configs/users.ini
@@ -268,20 +274,7 @@ vi ~/share/cstrike/addons/amxmodx/configs/users.ini
 vi ~/share/cstrike/addons/amxmodx/configs/amxx.cfg
 # sql
 vi ~/share/cstrike/addons/amxmodx/configs/sql.cfg
-
-# restart
-sudo docker restart hlds16
 ```
-
-
-
-
-
-
-
-
-
-# amxx plugins
 
 ## Парашют
 https://cs-mod.ru/load/plaginy_dlja_cs_1_6/servernye/plagin_parashjut_dlja_ks_1_6/98-1-0-220
@@ -325,7 +318,7 @@ cp ~/cstrike/addons/amxmodx/configs/maps.ini ~/share/cstrike/addons/amxmodx/conf
 
 
 
-## Рестарт
+## Подключаем плагины
 ```bash
 vi ~/share/cstrike/addons/amxmodx/configs/plugins.ini
 #--
